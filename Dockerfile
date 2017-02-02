@@ -4,7 +4,7 @@ MAINTAINER Nathan McAullay <nmcaullay@gmail.com>
 
 #Create the HTS user (9981), and add to user group (9981)
 #RUN addgroup -g 9981 hts
-RUN adduser -u 9981 -g 9981 hts
+#RUN adduser -u 9981 -g 9981 hts
 
 # install build packages
 RUN \
