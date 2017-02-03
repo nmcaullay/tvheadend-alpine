@@ -36,11 +36,17 @@ RUN \
 	wget \
 	zlib-dev && \
 
+cd /tmp && \
+git clone --depth=1 git://linuxtv.org/media_build.git v4l-dvb && \
+cd v4l-dvb && \
+cd media_build  && \
+./build && \
+
 # build dvb-apps
- hg clone http://linuxtv.org/hg/dvb-apps /tmp/dvb-apps && \
- cd /tmp/dvb-apps && \
- make && \
- make install && \
+# hg clone http://linuxtv.org/hg/dvb-apps /tmp/dvb-apps && \
+# cd /tmp/dvb-apps && \
+# make && \
+# make install && \
  
 cd /tmp && \
     git clone https://github.com/tvheadend/tvheadend.git && \
