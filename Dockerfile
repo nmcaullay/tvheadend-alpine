@@ -20,7 +20,9 @@ VOLUME ["/config"]
 VOLUME ["/media"]
 
 #Start tvheadend when container starts 
-CMD ["/usr/bin/tvheadend","-C","-u","tvheadend","-g","tvheadend","-c","/config"]
+ENTRYPOINT ["/usr/bin/tvheadend"]
+CMD ["-C","-c","/config"]
+#CMD ["/usr/bin/tvheadend","-C","-c","/config"]
 #CMD ["-u","tvheadend","-g","tvheadend","-c","/config"]
 #ENTRYPOINT ["/usr/bin/tvheadend"]
 #ENTRYPOINT ["/usr/bin/tvheadend"]
